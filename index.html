@@ -54,7 +54,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://greet-me-app.s3.us-east-2.amazonaws.com/social-media-preview-1200-630.png"
+      content="https://greet-me-app.s3.us-east-2.amazonaws.com/sunrise-greetme-preview-1200-630.png"
     />
     <meta name="twitter:url" content="https://www.getgreet.me" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -69,13 +69,17 @@
 
     <style>
       body {
-        background: linear-gradient(-45deg, #e65d33, #e53377, #1ba8db, #1bd9ad);
-        background-size: 400% 400%;
-        animation: gradient 7s ease infinite;
-        border: none;
-        font-family: "Hind Madurai";
+        background-color: ghostwhite;
+        font-family: sans-serif;
         text-align: center;
-        color: white;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        min-height: 90vh;
+      }
+
+      body > div {
+        flex-grow: 1;
       }
 
       button {
@@ -84,87 +88,62 @@
         border: solid thin;
         border-radius: 10px;
         background: transparent;
-        color: white;
+        color: black;
         font-size: 24px;
         transition: 0.1s;
       }
 
       button:hover {
         transform: translateY(-2px);
-        box-shadow: 0px 2px white;
+        box-shadow: 0px 2px black;
         cursor: pointer;
       }
 
       button:active {
         transform: translateY(-1px);
-        box-shadow: 0 1px white;
+        box-shadow: 0 1px black;
         box-sizing: 0 0;
       }
 
-      p {
-        position: fixed;
-        bottom: 0px;
-        left: 20px;
-        width: 100%;
-        text-align: left;
-        padding: 10px;
+      img {
+        width: 60%;
+        max-width: 1440px;
+        padding-bottom: 20px;
       }
 
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-
-      .header-wrapper {
-        margin: 10% auto;
-      }
-
-      .header-wrapper h1 {
-        width: 70%;
-        margin: 0 auto;
-        font-size: 96px;
-        line-height: 100px;
-      }
-
-      .header-wrapper h2 {
-        font-size: 48px;
-        margin: 2% auto;
-        width: 50%;
+      footer {
+        text-align: center;
       }
 
       @media only screen and (max-width: 600px) {
-        button {
-          font-size: 16px;
-        }
-        .header-wrapper {
-          margin: 20% auto;
+        body {
+          min-height: 95vh;
         }
 
-        .header-wrapper h1 {
+        h1 {
+          font-size: x-large;
+        }
+
+        h2 {
+          font-size: large;
+        }
+
+        img {
           width: 95%;
-          margin: 0 auto;
-          font-size: 24px;
-          line-height: 30px;
         }
 
-        .header-wrapper h2 {
-          font-size: 18px;
-          margin: auto;
-          margin-top: 5%;
-          width: 90%;
+        button {
+          font-size: 20px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="header-wrapper">
+    <div>
+      <div>
+        <img src="screenshot-moon.png" />
+      </div>
+
       <h1>GreetMe makes opening a new browser tab fun and friendly</h1>
       <h2>
         Goals, notes, tasks, and stunning Unsplash photos you choose, each and
@@ -175,9 +154,14 @@
         href="https://chrome.google.com/webstore/detail/greetme/lafhiiebffibifegdiifmbgojeefcdmp"
         ><button>Go to the Chrome store</button></a
       >
-
-      <p>&copy; 2024 zack wilder</p>
     </div>
+
+    <footer>
+      <p>
+        &copy; 2024
+        <a href="https://zackwilder.com">zack wilder</a>
+      </p>
+    </footer>
   </body>
   <!-- <script>
 		setTimeout(() => {
